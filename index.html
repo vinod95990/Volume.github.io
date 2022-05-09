@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="logo/f.png" type="image/icon type">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>VoLume</title>
+</head>
+<body>
+    <div class="connect"><h3>CONNECT</h3></div>
+    <div class="social-links">
+        <a href="https://twitter.com/TricksArena1" target="blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/vinod-m-345a701b6/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/vinod95990" target="blank"><i class="fab fa-github"></i></a>
+        <div class="followups"></div>
+    </div>
+    <div class="Hiccup">
+        <p class="Yname">Name</p>
+        <p class="yourName">Hiccup</p>
+    </div>
+        <div >
+        <img class="bg" src="img/General.jpg" alt=".">
+        </div>
+        <div class="rooms">
+            <div data-id="General" class="active" id="r1"><button>General</button></div>
+            <div data-id="Gaming" id="r2"><button>Gaming</button></div>
+            <div data-id="Music" id="r3"><button>Music</button></div>
+            <div data-id="ChillZ" id="r4"><button>ChillZ</button></div>
+        </div>
+        <div class="formE">
+            <div>
+                <form class="ipm">
+                    <label for="mip">Chat</label>
+                    <input type="text" name="ipmf" id="mip" >
+                    <button class="mipb">Send</button>
+                </form>
+            </div>
+    
+            <div>
+                <form class="fupdate">
+                    <label for="un">Name</label>
+                    <input type="text" name="unf" id="un">
+                    
+                    <button class="unb">Update</button>
+                </form>
+            </div>
+        </div>
+
+
+   
+    <ul class="chatUI">
+
+    </ul>  
+       
+    
+
+    
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyBurNb7QJ4leeQKKfs5FpWjeodZn51Z6II",
+    authDomain: "volume-30892.firebaseapp.com",
+    projectId: "volume-30892",
+    storageBucket: "volume-30892.appspot.com",
+    messagingSenderId: "542896186390",
+    appId: "1:542896186390:web:12ebef1f23a8a87a764137"
+  };
+
+ // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = firebase.firestore();
+</script>
+<script src="script.js"></script>
+<script src="UI.js"></script>
+</body>
+</html>
