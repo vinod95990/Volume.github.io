@@ -76,7 +76,7 @@ rooms.addEventListener('click',function(e){
      });
     roomAudio.play();
         e.target.parentElement.classList.add('active');
-        img.setAttribute('src',`img/${r}.jpg`);
+        img.setAttribute('src',`img/${r}.png`);
       
    }
     
@@ -119,7 +119,8 @@ class user{
         console.log('pused to ui');
         const html=`
         <li class="msg">
-        <span class="userName">${obj.name}</span>&nbsp;&nbsp;<span class="textm"> ${obj.message}</span>
+        <div class="space"></div>
+        <span class="userName">${obj.name}</span>&nbsp;&nbsp;<div class="textm"> ${obj.message}</div>
         <p class="time">${dateFns.distanceInWordsToNow(obj.time.toDate(),{addSuffix:true})}</p>
         </li>
         
