@@ -13,43 +13,115 @@
     <title>VoLume</title>
 </head>
 <body>
+
+
+
     <div class="connect"><h3>CONNECT</h3></div>
     <div class="social-links">
-        <a href="https://twitter.com/TricksArena1" target="blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/vinod-m-345a701b6/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/vinod95990" target="blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/TricksArena1" target="blank"><i class="fab  fa-twitter"></i></i></a>
+        <a href="https://www.linkedin.com/in/vinod-m-345a701b6/" target="blank"><i class="fab  fa-linkedin-in"></i></a>
+        <a href="https://github.com/vinod95990" target="blank"><i class="fab  fa-github"></i></a>
         <div class="followups"></div>
     </div>
-    <div class="Hiccup">
-        <p class="Yname">Name</p>
-        <p class="yourName">Hiccup</p>
+   
+
+        <div class="sidebar">
+            <div class="dots">
+                <div  class="dot" id="dot1"></div>
+                <div  class="dot" id="dot2"></div>
+                <div  class="dot" id="dot3"></div>
+            </div>
+            <div class="about">
+                <i class='fas fa-user fa-1x' style='color:#ffffff'></i></div>
+            <div class="roomi">
+                <i class='fas fa-headphones fa-1x' style='color:#ffffff'></i>           </div>
+            
+        </div>
+
+        <div  class="aboutuser">
+        <div class="mainContainer">
+            <div class="main_user">
+                <div class="profile">
+                    <img src="profile_pic/8.jpg" alt="">
+                </div>
+                    <div class="Hiccup">
+                        <p class="yourName">Hiccup</p>
+                    </div>
+                    <div class="d3">
+                        <div class="d31"></div>
+                        <div class="d31"></div>
+                        <div class="d31"></div>
+                    </div>
+     
+            </div>
+
+            <div class="changepic">
+                <p>Select pic <i class='fad fa-angle-double-right fa-lg' style='color:#20c997'></i></p>
+                
+                <div class="picollection">
+                    <button><img src="profile_pic/1.jpg" alt=""></button>
+                    <button><img src="profile_pic/2.jpg" alt=""></button>
+                    <button><img src="profile_pic/3.jpg" alt=""></button>
+                    <button><img src="profile_pic/4.jpg" alt=""></button>
+                    <button><img src="profile_pic/5.jpg" alt=""></button>
+                    <button><img src="profile_pic/6.jpg" alt=""></button>
+                    <button><img src="profile_pic/7.jpg" alt=""></button>
+                    <button><img src="profile_pic/8.jpg" alt=""></button>
+                    <button><img src="profile_pic/9.jpg" alt=""></button>
+                </div>
+
+                <div class="line"></div>
+            </div>
+
+            <div class="changename">
+                <p>Update Name</p>
+                <div>
+                    <form class="fupdate">
+                        <label for="un"></label>
+                        <input type="text" name="unf" id="un" placeholder="Enter name">
+                        
+                        <button class="unb"><i class='fas fa-exchange fa-lg' style='color:#ca38ff'></i></button>
+                    </form>
+                </div>
+
+                <div class="line"></div>
+            </div>
+
+            <div class="userV"><p>Change Volume</p></div>
+            <div class="rooms">
+                <div data-id="General" class="active" id="r1">
+                    <button>General</button>
+
+                </div>
+                <div data-id="Gaming" id="r2">
+                    <button>Gaming</button>
+
+                </div>
+                <div data-id="Music" id="r3">
+                    <button>Music</button>
+
+                </div>
+                <div data-id="ChillZ" id="r4">
+                    <button>ChillZ</button>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-        <div >
-        <img class="bg" src="img/General.jpg" alt=".">
-        </div>
-        <div class="rooms">
-            <div data-id="General" class="active" id="r1"><button>General</button></div>
-            <div data-id="Gaming" id="r2"><button>Gaming</button></div>
-            <div data-id="Music" id="r3"><button>Music</button></div>
-            <div data-id="ChillZ" id="r4"><button>ChillZ</button></div>
-        </div>
+
+       
+
+
         <div class="formE">
-            <div>
+            
                 <form class="ipm">
-                    <label for="mip">Chat</label>
-                    <input type="text" name="ipmf" id="mip" >
-                    <button class="mipb">Send</button>
+                  
+                        <label for="mip"></label>
+                        <input type="text" name="ipmf" id="mip" placeholder="Your Message..." >
+                        <button class="mipb"><i class='fas fa-paper-plane fa-3x' style='color:#ded5ff'></i></button>
                 </form>
-            </div>
-    
-            <div>
-                <form class="fupdate">
-                    <label for="un">Name</label>
-                    <input type="text" name="unf" id="un">
-                    
-                    <button class="unb">Update</button>
-                </form>
-            </div>
+   
         </div>
 
 
@@ -61,7 +133,7 @@
     
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
