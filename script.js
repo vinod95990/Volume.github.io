@@ -240,8 +240,9 @@ const pnum=localStorage.getItem("pnum");
 
 if( z=== null)
 {
-    const u1=new user('Hiccup','',8);
-    u1.updateRoom('General');
+    const u2=new user('Hiccup','',8);
+    u2.updateRoom('General');
+    u1=u2;
 }
 else{
     if(pnum==null)
