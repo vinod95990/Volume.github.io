@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="logo/f.png" type="image/icon type">
+    <link rel="icon" href="logo/awesome chat wing logo design.jpg" type="image/icon type">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>VoLume</title>
+    <title>Volume - Group Chat</title>
 </head>
 <body>
 
 
-
-    <div class="connect"><h3>CONNECT</h3></div>
     <div class="social-links">
         <a href="https://twitter.com/TricksArena1" target="blank"><i class="fab  fa-twitter"></i></i></a>
         <a href="https://www.linkedin.com/in/vinod-m-345a701b6/" target="blank"><i class="fab  fa-linkedin-in"></i></a>
@@ -56,18 +54,38 @@
             </div>
 
             <div class="changepic">
-                <p>Select pic <i class='fad fa-angle-double-right fa-lg' style='color:#20c997'></i></p>
+                <p>Select pic <i class='fad fa-angle-double-right fa-lg' style='color:#20c997'></i>
+                    <button class="picExcBtn"><i class='fas fa-exchange fa-lg' style='color:#ca38ff'></i></button>
+                </p>
                 
-                <div class="picollection">
-                    <button><img src="profile_pic/1.jpg" alt=""></button>
-                    <button><img src="profile_pic/2.jpg" alt=""></button>
-                    <button><img src="profile_pic/3.jpg" alt=""></button>
-                    <button><img src="profile_pic/4.jpg" alt=""></button>
-                    <button><img src="profile_pic/5.jpg" alt=""></button>
-                    <button><img src="profile_pic/6.jpg" alt=""></button>
-                    <button><img src="profile_pic/7.jpg" alt=""></button>
-                    <button><img src="profile_pic/8.jpg" alt=""></button>
-                    <button><img src="profile_pic/9.jpg" alt=""></button>
+                <div class="picollection pictoggle">
+                    <div >
+                    <button data-id="1"><img src="profile_pic/1.jpg" alt=""></button>
+                    </div>
+                    <div >
+                    <button data-id="2" ><img src="profile_pic/2.jpg" alt=""></button>
+                    </div>
+                    <div>
+                    <button  data-id="3"><img src="profile_pic/3.jpg" alt=""></button>
+                    </div>
+                    <div >
+                    <button data-id="4"><img src="profile_pic/4.jpg" alt=""></button>
+                    </div>
+                    <div >
+                    <button data-id="5"><img src="profile_pic/5.jpg" alt=""></button>
+                    </div>
+                    <div>
+                    <button  data-id="6"> <img src="profile_pic/6.jpg" alt=""></button>
+                    </div>
+                    <div>
+                    <button  data-id="7"><img src="profile_pic/7.jpg" alt=""></button>
+                    </div>
+                    <div >
+                    <button data-id="8"><img src="profile_pic/8.jpg" alt=""></button>
+                    </div>
+                    <div>
+                    <button  data-id="9"><img src="profile_pic/9.jpg" alt=""></button>
+                    </div>
                 </div>
 
                 <div class="line"></div>
@@ -87,7 +105,7 @@
                 <div class="line"></div>
             </div>
 
-            <div class="userV"><p>Change Volume</p></div>
+            <div class="userV"><p>Change Space/Room</p></div>
             <div class="rooms">
                 <div data-id="General" class="active" id="r1">
                     <button>General</button>
@@ -119,7 +137,7 @@
                   
                         <label for="mip"></label>
                         <input type="text" name="ipmf" id="mip" placeholder="Your Message..." >
-                        <button class="mipb"><i class='fas fa-paper-plane fa-3x' style='color:#ded5ff'></i></button>
+                        <button class="mipb"><i class='fas fa-paper-plane fa-2x' style='color:#ded5ff'></i></button>
                 </form>
    
         </div>
@@ -133,7 +151,7 @@
     
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
@@ -155,6 +173,5 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 </script>
 <script src="script.js"></script>
-<script src="UI.js"></script>
 </body>
 </html>

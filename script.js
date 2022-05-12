@@ -3,13 +3,13 @@ db.collection('Test').get().then(function(res){
     res.docs.forEach(function(x){
     });
 }).catch(function(e){
-    console.log(e);
+    alert('Oops! Error caught 😅')
 });
 
 
 // audio
-var upNameAudio = new Audio('audio/zapsplat_technology_computer_apple_magic_keyboard_space_bar_press_002_17523.mp3');
-var sendAudio=new Audio('audio/send.mp3');
+var  sendAudio= new Audio('audio/zapsplat_technology_computer_apple_magic_keyboard_space_bar_press_002_17523.mp3');
+var upNameAudio=new Audio('audio/send.mp3');
 var roomAudio=new Audio('audio/rooms.mp3');
 
 // selection ip fields
@@ -76,8 +76,6 @@ rooms.addEventListener('click',function(e){
      });
     roomAudio.play();
         e.target.parentElement.classList.add('active');
-        img.setAttribute('src',`img/${r}.png`);
-      
    }
     
 });
@@ -87,10 +85,11 @@ rooms.addEventListener('click',function(e){
 // User
 
 class user{
-    constructor(name,room)
+    constructor(name,room,n)
     {
         this.name=name;
         this.room=room;
+        this.pic=n;
     }
 
     pushMessageDB(data){
@@ -99,7 +98,7 @@ class user{
             message:data,
             name:this.name,
             room:this.room,
-            
+            pic:this.pic,
             time:firebase.firestore.Timestamp.fromDate(new Date())
         };
 
@@ -119,8 +118,19 @@ class user{
         console.log('pused to ui');
         const html=`
         <li class="msg">
+        
         <div class="space"></div>
-        <span class="userName">${obj.name}</span>&nbsp;&nbsp;<div class="textm"> ${obj.message}</div>
+            <div class="chatPN">
+                <div class="chatpic"><img src="profile_pic/${obj.pic}.jpg" alt=""></div>
+
+                <div class=""txtside>
+                
+                <div class="userName">${obj.name}</div>
+                <div class="textm"> ${obj.message}</div>
+                </div>
+            </div>
+        &nbsp;&nbsp;
+        
         <p class="time">${dateFns.distanceInWordsToNow(obj.time.toDate(),{addSuffix:true})}</p>
         </li>
         
@@ -139,6 +149,14 @@ class user{
     {
         this.name=n;
         cn.textContent=n;
+        localStorage.setItem('name',n);
+    }
+
+
+    updatepic(n)
+    {
+        this.pic=n;
+        localStorage.setItem('pnum',n);
     }
 
     updateRoom(z)
@@ -177,11 +195,75 @@ class user{
 }
 
 
-const u1=new user('Hiccup','');
-u1.updateRoom('General');
+// pic collection
+const q=document.querySelector('.picollection');
+document.querySelector('.fa-angle-double-right').addEventListener('click',function(){
+    upNameAudio.play();
+    q.classList.toggle('pictoggle');
+});
+
+var imgs=0;
+var id=-1;
+
+q.addEventListener('click',function(e){
+
+   if(e.target.tagName=='IMG'){
+    Array.from(q.children).forEach(function(x){
+        x.children[0].classList.contains('pickclick') ? x.children[0].classList.remove('pickclick'):1;
+    });
+ e.target.parentElement.classList.add('pickclick');
+
+    imgs=e.target.getAttribute('src'); // img
+    id=e.target.parentElement.getAttribute('data-id');
+    }
+});
+
+
+const pickbtn=document.querySelector('.picExcBtn');
+const userpic=document.querySelector('.profile');
+
+
+
+pickbtn.addEventListener('click',function(){
+    if(imgs!=0)
+    {
+        userpic.children[0].setAttribute('src',imgs);
+        u1.updatepic(id);
+    }
+})
+
+
+
+var u1;
+const z=localStorage.getItem("name");
+const pnum=localStorage.getItem("pnum");
+
+if( z=== null)
+{
+    const u1=new user('Hiccup','',8);
+    u1.updateRoom('General');
+}
+else{
+    if(pnum==null)
+    {
+        const u2=new user(z,'',8);
+        u1=u2;
+    }
+    else{
+        const u2=new user(z,'',pnum);
+        u1=u2;
+        userpic.children[0].setAttribute('src',`profile_pic/${pnum}.jpg`);
+    }
+    
+    u1.updateRoom('General');
+    cn.textContent=z;
+}
+
 
 
 
 // ----------------Real time listener------------------
 
 // only listen to values having room = current room
+
+
