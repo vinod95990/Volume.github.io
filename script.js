@@ -225,6 +225,7 @@ const userpic=document.querySelector('.profile');
 
 
 pickbtn.addEventListener('click',function(){
+    upNameAudio.play();
     if(imgs!=0)
     {
         userpic.children[0].setAttribute('src',imgs);
