@@ -208,30 +208,20 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ade9",endCo
   }
 /* Track */
 ::-webkit-scrollbar-track {
-    height: 10%;
-    background: rgba(17,19,23,255);
+    height: 4%;
+    /* background: rgba(17,19,23,255); */
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(255, 89, 0);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 89, 0, 1) 28%,
-      rgba(156, 74, 255, 1) 100%,
-      rgba(255, 0, 0, 1) 100%
-    );
+    background-color: #645c5c;
+    border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 89, 0);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 89, 0, 1) 12%,
-      rgba(68, 65, 255, 1) 100%,
-      rgba(255, 0, 0, 1) 100%
-    );
+    background-color: #d4d4d8;
+
   }
 
 
